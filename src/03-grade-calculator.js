@@ -24,6 +24,32 @@
  * @param {boolean} hasExtraCredit - Whether the student has extra credit
  * @returns {string} The letter grade or "INVALID"
  */
+
 export function calculateGrade(score, hasExtraCredit) {
-  // Your code here
+  if (score < 0 || score > 100){
+    return "INVALID";
+  }
+  let finalscore = score;
+  if(hasExtraCredit){
+    finalscore = Math.min(score + 5, 100);
+  }
+
+  if(finalscore >= 90){
+    return "A"
+  }else if(finalscore >= 80){
+    return "B"
+  }
+  else if(finalscore >= 70){
+    return "C"
+  }
+  else if(finalscore >= 60){
+    return "D"
+  }
+  else if(finalscore >= 0){
+    return "F"
+  }
 }
+
+console.log(calculateGrade(87, false));
+console.log(calculateGrade(76, false));
+console.log(calculateGrade(34, true));
