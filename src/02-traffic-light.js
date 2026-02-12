@@ -42,7 +42,3 @@ export function getTrafficAction(color) {
   }
 }
 
-console.log(getTrafficAction("green"));   
-console.log(getTrafficAction("YELLOW"));      
-console.log(getTrafficAction("Flashing Red"));
-console.log(getTrafficAction("blue"));        

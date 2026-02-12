@@ -50,6 +50,3 @@ export function calculateGrade(score, hasExtraCredit) {
   }
 }
 
-console.log(calculateGrade(87, false));
-console.log(calculateGrade(76, false));
-console.log(calculateGrade(34, true));
